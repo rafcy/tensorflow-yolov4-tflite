@@ -15,13 +15,17 @@ Download yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnu
 
 ### HOW TO RUN FOR CONVERSION OF YOLO WEIGHTS TO TFLITE
 * python save_model.py --weights ./tyv4_3l_30000.weights --output ./checkpoints/tyv4-3l-vehicles --input_size 608 --model yolov4-tiny-3l --tiny --framework tflite
-#OR
+
+OR
 * python save_model.py --weights ./tyv4_30000.weights --output ./checkpoints/tyv4-vehicles --input_size 512 --model yolov4l --tiny --framework tflite
-#Convert to tflite
+
+Convert to tflite
 * python convert_tflite.py --weights ./checkpoints/tyv4-3l-vehicles/ --output ./checkpoints/tyv4-3l-vehicles-fp16.tflite --quantize_mode float16   
-#OR
+
+OR
 * python convert_tflite.py --weights ./checkpoints/tyv4-vehicles/ --output ./checkpoints/tyv4-vehicles-fp16.tflite --quantize_mode float16   
-#DETECT VIDEO 
+
+DETECT VIDEO 
 * python detectvideo.py --weights ./checkpoints/tyv4-3l-vehicles-fp16.tflite --size 608 --model yolov4-tiny-3l --tiny --framework tflite --video ./DJI_0005_lowheight.MP4           
 ### Demo
 
