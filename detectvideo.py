@@ -62,6 +62,7 @@ def main(_argv):
         return_value, frame = vid.read()
         if return_value:
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            frame = cv2.resize(frame,(1280,720))
             image = Image.fromarray(frame)
         else:
             if frame_id == vid.get(cv2.CAP_PROP_FRAME_COUNT):
