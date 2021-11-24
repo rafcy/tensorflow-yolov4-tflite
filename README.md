@@ -17,7 +17,7 @@ Download yolov4.weights file: https://drive.google.com/open?id=1cewMfusmPjYWbrnu
 * python save_model.py --weights ./tyv4_3l_30000.weights --output ./checkpoints/tyv4-3l-vehicles --input_size 608 --model yolov4-tiny-3l --tiny --framework tflite
 
 OR
-* python save_model.py --weights ./tyv4_30000.weights --output ./checkpoints/tyv4-vehicles --input_size 512 --model yolov4l --tiny --framework tflite
+* python save_model.py --weights ./tyv4_30000.weights --output ./checkpoints/tyv4-vehicles --input_size 512 --model yolov4 --tiny --framework tflite
 
 Convert to tflite
 * python convert_tflite.py --weights ./checkpoints/tyv4-3l-vehicles/ --output ./checkpoints/tyv4-3l-vehicles-fp16.tflite --quantize_mode float16   
